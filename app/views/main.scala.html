@@ -5,15 +5,25 @@
     <head>
         <title>@title</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/eventCalendar/eventCalendar.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/eventCalendar/eventCalendar_theme_responsive.css")">
+
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script src="@routes.Assets.at("javascripts/jquery-1.8.3.min.js")" type="text/javascript"></script>
+
     </head>
     <body>
         @content
 
 
+        <script src="@routes.Assets.at("javascripts/jquery-1.8.3.min.js")" type="text/javascript"></script>
         <script src="@routes.Assets.at("javascripts/knockout-2.2.0.js")" type="text/javascript"></script>
-        <script src="@routes.Assets.at("javascripts/knockout.mapping-latest.js")" type="text/javascript"></script>
+        <!--<script src="@routes.Assets.at("javascripts/knockout.mapping-latest.js")" type="text/javascript"></script>-->
+        <script src="@routes.Assets.at("javascripts/eventCalendar/jquery.eventCalendar.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/eventCalendar/jquery.eventCalendar.js")" type="text/javascript"></script>
+
+
         <script src="@routes.Assets.at("javascripts/kudos.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/calendar.js")" type="text/javascript"></script>
     </body>
 </html>
