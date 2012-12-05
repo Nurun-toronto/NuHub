@@ -1,0 +1,27 @@
+@()
+
+@main("NuHub") {
+   <h1>Nuhub</h1>
+
+   <div id="mainHolder">
+   		<div>
+	   		@views.html.widgets.news()
+
+			@views.html.widgets.newsExternal()
+
+			@views.html.widgets.weather()
+		</div>
+		<div>
+			@views.html.widgets.flickr()
+
+			@views.html.widgets.lunch()
+	   		
+	   		@views.html.widgets.kudos()
+
+	   		@views.html.widgets.twitter()
+
+	   		@views.html.widgets.calendar()
+   		</div>
+   </div>
+    
+}
