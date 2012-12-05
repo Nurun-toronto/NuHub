@@ -1,2 +1,7 @@
-#kudosHolder {height: 180px; overflow-y: scroll;}
+.small_panel {height: 180px; overflow-y: auto; overflow-x: hidden; }
+
+#kudosHolder {}
 #kudosHolder ul {margin: 0 0 0 15px;}
+
+
+#tweet-container .tweet {}
