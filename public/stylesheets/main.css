@@ -4,4 +4,8 @@
 #kudosHolder ul {margin: 0 0 0 15px;}
 
 
-#tweet-container .tweet {}
+#tweet-container .tweet {clear: both; margin: 0 0 10px 0;}
+#tweet-container .tweet .avatar {float: left; margin: 0 10px 10px 0;}
+#tweet-container .tweet .user {float: left;}
+#tweet-container .tweet .time {font-size: 10px; float: right; }
+#tweet-container .tweet  .txt {}

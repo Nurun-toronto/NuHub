@@ -3,19 +3,27 @@
 @main("NuHub") {
 
 
-  <nav class="top-bar">
+<nav class="top-bar">
     <ul>
       <!-- Title Area -->
       <li class="name">
         <h1>
           <a href="#">
-            NuHub
+            <img src="@routes.Assets.at("images/nuhub/nuhub-logo.png")"/>
           </a>
         </h1>
       </li>
       <li class="toggle-topbar"><a href="#"></a></li>
     </ul>
 
+    <section>
+      
+      <ul class="left">       
+      </ul>
+
+      <ul class="right">        
+      </ul>
+    </section>
   </nav>
 
   <!-- End Header and Nav -->
@@ -23,46 +31,50 @@
   <!-- Main Grid Section -->
 
   <div class="row">  		
-	<div class="nine columns">
-      @views.html.widgets.news()
+	 <div class="nine columns">
+      <div class="panel large_panel yammerNews" style="padding:30px">
+        @views.html.widgets.news()
+      </div>
     </div>
-    <div class="seven columns">
-		@views.html.widgets.flickr()
-	 </div>      	
-  </div>
+      <div class="seven columns">
+        <div class="panel large_panel flickr" style="overflow:hidden; margin:0; padding:0; background:#fff;">
+  		    @views.html.widgets.flickr()
+        </div>
+  	 </div>      
+   </div>	
 
   <div class="row" >
-
     <div class="four columns">
-      <div class="panel small_panel body">
+      <div class="panel small_panel weather">
         	@views.html.widgets.weather()
       </div>
     </div>
     <div class="four columns">
-    	<div class="panel small_panel mind">
+      <div class="panel small_panel news">
       		@views.html.widgets.newsExternal()
   		</div>
     </div>
     <div class="eight columns">
-     	@views.html.widgets.lunch()
-    </div>
-
+      <div class="panel small_panel lunch" style="padding:0;">
+       	@views.html.widgets.lunch()
+      </div>
+    </div>  
   </div>
  
   <div class="row">
 
     <div class="seven columns">
-      <div class="panel small_panel soul">
+      <div class="panel small_panel calendar">
         @views.html.widgets.calendar()
       </div>
     </div>
     <div class="four columns">
-      <div class="panel small_panel soul">        
+      <div class="panel small_panel kudos">        
         @views.html.widgets.kudos()
       </div>
     </div>
     <div class="five columns">
-      <div class="panel small_panel mind">
+      <div class="panel small_panel twitter">
         @views.html.widgets.twitter()
       </div>        
     </div>
@@ -76,7 +88,7 @@
   <!-- Footer -->
 
   <footer class="row">
-    <div class="sixteen columns">
+    <div class="sixteen columns" style="color:#fff">
           <p>&copy; Nuhub. The whole is greater than the sum of its parts.</p>
     </div>
   </footer>
