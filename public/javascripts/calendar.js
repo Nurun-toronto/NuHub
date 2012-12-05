@@ -7,10 +7,10 @@ $(function(){
 		$.getJSON(calendarDataUrl, function(jsonData) {
 		   calendarData = [];
 		   $.each(jsonData["hits"]["hits"], function(){	    	
-		    	//if(this._source["date"] !== undefined){
-		    		this._source["date"] = (new Date(this._source["date"] || this._source["when"]).getTime());
+		    	if(this._source["date"] !== undefined){
+		    		this._source["date"] = (new Date(this._source["date"] || this._source["when"]).getTime()).toString();
 		    		calendarData.push(this._source);
-		    	//}
+		    	}
 		    });
 		   calendarHolder.empty();
 		   $("<div />").appendTo(calendarHolder).eventCalendar({
