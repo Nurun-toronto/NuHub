@@ -1,9 +1,7 @@
 "use strict";
 //kudos example
 $(function(){
-	var kudosDataUrl = "http://nuhub.nurun.com:9200/kudos/kudo/_search?q=fromuser:max";
-	//http://nuhub.nurun.com:9200/kudos/kudo/_search?q=fromuser:max
-
+	var kudosDataUrl = "http://nuhub.nurun.com:9200/kudos/kudo/_search?q=fromuser:*";
 
 	var KudosMsg = function(data) {
 	    this.fromuser = data.fromuser || "";
@@ -17,13 +15,30 @@ $(function(){
 	    KudosMsgs : ko.observableArray()
 	    
 	};
-	$.getJSON(kudosDataUrl, function(jsonData) {
-	    // Now use this data to update your view models,
-	    // and Knockout will update your UI automatically
-	    viewModel.KudosMsgs = [];
-	    $.each(jsonData["hits"]["hits"], function(){
-	    	viewModel.KudosMsgs.push(new KudosMsg(this._source));
-	    });
-	    ko.applyBindings(viewModel);
+
+
+	window.updateKudosMsg = function(callback){
+		$.getJSON(kudosDataUrl, function(jsonData) {
+		    // Now use this data to update your view models,
+		    // and Knockout will update your UI automatically
+		    console.log("xxxx");
+		    viewModel.KudosMsgs = [];
+		    $.each(jsonData["hits"]["hits"], function(){
+		    	viewModel.KudosMsgs.push(new KudosMsg(this._source));
+		    });		   
+		    console.log(viewModel.KudosMsgs);
+		    if(typeof callback === "function"){
+		    	callback();
+		    }
+		});
+	}
+
+
+	window.updateKudosMsg(function(){
+		ko.applyBindings(viewModel);
 	});
+	 
+	window.kudosInterval = window.setInterval(function(){
+		window.updateKudosMsg()
+	}, 1000 * 60 * 1);
 });

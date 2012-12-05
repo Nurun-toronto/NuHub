@@ -1,27 +1,83 @@
 @()
 
 @main("NuHub") {
-   <h1>Nuhub</h1>
 
-   <div id="mainHolder">
-   		<div>
-	   		@views.html.widgets.news()
 
-			@views.html.widgets.newsExternal()
+  <nav class="top-bar">
+    <ul>
+      <!-- Title Area -->
+      <li class="name">
+        <h1>
+          <a href="#">
+            NuHub
+          </a>
+        </h1>
+      </li>
+      <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
 
-			@views.html.widgets.weather()
-		</div>
-		<div>
-			@views.html.widgets.flickr()
+  </nav>
 
-			@views.html.widgets.lunch()
-	   		
-	   		@views.html.widgets.kudos()
+  <!-- End Header and Nav -->
 
-	   		@views.html.widgets.twitter()
+  <!-- Main Grid Section -->
 
-	   		@views.html.widgets.calendar()
-   		</div>
-   </div>
-    
+  <div class="row">  		
+	<div class="nine columns">
+      @views.html.widgets.news()
+    </div>
+    <div class="seven columns">
+		@views.html.widgets.flickr()
+	 </div>      	
+  </div>
+
+  <div class="row" >
+
+    <div class="four columns">
+      <div class="panel small_panel body">
+        	@views.html.widgets.weather()
+      </div>
+    </div>
+    <div class="four columns">
+    	<div class="panel small_panel mind">
+      		@views.html.widgets.newsExternal()
+  		</div>
+    </div>
+    <div class="eight columns">
+     	@views.html.widgets.lunch()
+    </div>
+
+  </div>
+ 
+  <div class="row">
+
+    <div class="seven columns">
+      <div class="panel small_panel soul">
+        @views.html.widgets.calendar()
+      </div>
+    </div>
+    <div class="four columns">
+      <div class="panel small_panel soul">        
+        @views.html.widgets.kudos()
+      </div>
+    </div>
+    <div class="five columns">
+      <div class="panel small_panel mind">
+        @views.html.widgets.twitter()
+      </div>        
+    </div>
+
+  </div>
+
+  <!-- End Grid Section -->
+
+
+
+  <!-- Footer -->
+
+  <footer class="row">
+    <div class="sixteen columns">
+          <p>&copy; Nuhub. The whole is greater than the sum of its parts.</p>
+    </div>
+  </footer>
 }

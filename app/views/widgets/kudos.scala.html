@@ -1,12 +1,9 @@
-<div>
-	<h2>Kudos</h2>
-	<div>
-		<ul data-bind="foreach: KudosMsgs">	
-			<li>
-				<span  data-bind="text:fromuser"></span> to <span  data-bind="text:touser"></span> 				
-				<span  data-bind="text:post_date"></span>
-				<span  data-bind="text:message"></span>
-			</li>
-		</ul>
-	</div>
-<div>
+
+<h5>Kudos</h5>
+<ul data-bind="foreach: KudosMsgs">	
+	<li>
+		<span  data-bind="text:fromuser"></span> to <strong  data-bind="text:touser"></strong> 				
+		<span  data-bind="text:post_date"></span>
+		<div  data-bind="text:message"></div>
+	</li>
+</ul>
