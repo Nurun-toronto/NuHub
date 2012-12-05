@@ -1,0 +1,23 @@
+curl -XPOST 'http://nuhub.nurun.com:9200/kudos/kudo/' -d '{
+    "fromuser" : "max",
+    "touser" : "ankur",
+    "post_date" : "2012-12-05T10:12:12",
+    "message" : "good morning again",
+	"test": "value"
+}'
+
+curl -XGET 'http://nuhub.nurun.com:9200/kudos/kudo/_search?q=fromuser:max'
+ 
+ 
+curl -XPOST 'http://nuhub.nurun.com:9200/lunchs/lunch/' -d '{
+    "orguser" : "max",
+    "place" : "Test",
+    "post_date" : "2012-12-05T10:12:12",
+    "URL" : "http://www.yelp.ca/"
+}'
+
+curl -XGET 'http://nuhub.nurun.com:9200/lunchs/lunch/_search?q=orguser:max'
+ 
+ 
+
+ 
