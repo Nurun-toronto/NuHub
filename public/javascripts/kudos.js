@@ -21,12 +21,10 @@ $(function(){
 		$.getJSON(kudosDataUrl, function(jsonData) {
 		    // Now use this data to update your view models,
 		    // and Knockout will update your UI automatically
-		    console.log("xxxx");
 		    viewModel.KudosMsgs = [];
 		    $.each(jsonData["hits"]["hits"], function(){
 		    	viewModel.KudosMsgs.push(new KudosMsg(this._source));
 		    });		   
-		    console.log(viewModel.KudosMsgs);
 		    if(typeof callback === "function"){
 		    	callback();
 		    }

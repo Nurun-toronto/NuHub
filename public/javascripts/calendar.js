@@ -14,7 +14,7 @@ $(function(){
 		    });
 		   calendarHolder.empty();
 		   $("<div />").appendTo(calendarHolder).eventCalendar({
-			  jsonData: [],
+			  jsonData: calendarData,
 			  showDayAsWeeks: false,
 			  cacheJson : false
 			});
@@ -25,5 +25,5 @@ $(function(){
 	window.updateCalendar();
 	window.calendarInterval = window.setInterval(function(){
 		window.updateCalendar();
-	}, 1000 * 10);
+	}, 1000 * 60 * 1);
 });

@@ -1,8 +1,7 @@
  /* Theme CSS */
+ackground-color:#fff;
+ }
 .eventCalendar-wrap {
-	border:solid 1px #d3d3d3;
-	box-shadow:0 0 15px #999;
-	border-radius:5px;
 	margin-bottom:20px;
 	background-color:#fff;
 	color:#807E7E;
@@ -43,7 +42,7 @@
 	}
 		.eventsCalendar-currentTitle {
 			line-height:25px;
-			background-color:#138DA5;
+			background-color:#00cccc;
 			outline:1px solid #138DA5;
 			border:1px solid #E3E3E3;
 			border-width:1px 0;
@@ -141,9 +140,10 @@
 				}
 			.eventsCalendar-daysList li.current a {
 				color:#fff;
-				background:#449FB2;
-				box-shadow:inset 5px 5px 10px #216B7A;
-				text-shadow: 2px 2px 2px #216B7A;
+				background:#00cccc;
+				font-weight:bold;
+			/*	box-shadow:inset 5px 5px 10px #216B7A;
+				text-shadow: 2px 2px 2px #216B7A;*/
 			} 
 				li.eventsCalendar-day.current a:hover {
 					background-color:#79BDCC;
@@ -288,7 +288,7 @@ body {
 	margin:0 auto;
 	*/
 }
-a { color: #0E8EAB}
+/*a { color: #0E8EAB}*/
 /*
 .eventCalendar-wrap {
 	width:265px;
